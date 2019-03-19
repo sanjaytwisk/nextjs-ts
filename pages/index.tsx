@@ -1,4 +1,3 @@
-import './styles.css'
 import HomepageCounter from '@containers/counter/HomepageCounter'
 
 /**
@@ -6,7 +5,7 @@ import HomepageCounter from '@containers/counter/HomepageCounter'
  */
 const HomePage = () => {
   return (
-    <main className={`main main--accent`}>
+    <main>
       <h1>Hello, world!</h1>
       <HomepageCounter />
     </main>
