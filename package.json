@@ -15,7 +15,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run lint:types && npm run test"
+      "pre-commit": "lint-staged && npm run lint:types && npm run test",
+      "post-merge": "sh hooks/post-merge.sh",
+      "post-rewrite": "sh hooks/post-merge.sh"
     }
   },
   "lint-staged": {
