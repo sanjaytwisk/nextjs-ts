@@ -4,7 +4,7 @@
   "description": "Boilerplate for NextJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=test jest",
     "start": "NODE_ENV=production node ./next/production-server/index.js",
     "build": "next build && tsc --project tsconfig.server.json",
     "dev": "nodemon server/index.ts"
@@ -16,19 +16,25 @@
   "author": "Sanjay Twisk",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.1.6",
     "@zeit/next-typescript": "^1.1.1",
     "babel-loader": "^8.0.4",
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "typescript": "^3.2.1",
-    "typescript-babel-jest": "^1.0.5"
+    "typescript": "^3.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@types/jest": "^23.3.10",
     "@types/next": "^7.0.5",
     "@types/react": "^16.7.10",
     "@zeit/next-css": "^1.0.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.7",
     "postcss-nested": "^4.1.0",
     "postcss-preset-env": "^6.4.0",

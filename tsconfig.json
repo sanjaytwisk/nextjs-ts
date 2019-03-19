@@ -4,7 +4,7 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
-    "allowJs": true,
+    "allowJs": false,
     "strictNullChecks": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -18,5 +18,14 @@
     "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "es2015", "es2016"]
   },
-  "exclude": ["node_modules", "next.config.js", "postcss.config.js"]
+  "exclude": [
+    "node_modules",
+    "next.config.js",
+    "postcss.config.js",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "coverage"
+  ]
 }
