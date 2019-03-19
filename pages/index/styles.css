@@ -4,7 +4,11 @@
 
   &--accent {
     background-color: transparent;
-    color: tomato;
+    color: var(--color-brand-primary);
+
+    @media (--small) {
+      color: black;
+    }
   }
 }
 

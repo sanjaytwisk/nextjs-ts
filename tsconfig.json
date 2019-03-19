@@ -18,7 +18,8 @@
     "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "es2015", "es2016"],
     "paths": {
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@common/*": ["./src/common"]
     }
   },
   "exclude": [

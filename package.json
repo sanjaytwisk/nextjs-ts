@@ -37,6 +37,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.7",
+    "postcss-css-variables": "^0.11.0",
     "postcss-nested": "^4.1.0",
     "postcss-preset-env": "^6.4.0",
     "ts-node": "^7.0.1",

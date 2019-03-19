@@ -9,7 +9,7 @@
             "root": ["./"],
             "alias": {
               "@components": "./src/components",
-              "@styled": "./src/styled"
+              "@common": "./src/common"
             }
           }
         ]
@@ -24,7 +24,7 @@
             "root": ["./"],
             "alias": {
               "@components": "./src/components",
-              "@styled": "./src/styled"
+              "@common": "./src/common"
             }
           }
         ]
@@ -49,7 +49,7 @@
             "root": ["./"],
             "alias": {
               "@components": "./src/components",
-              "@styled": "./src/styled"
+              "@common": "./src/common"
             }
           }
         ]
