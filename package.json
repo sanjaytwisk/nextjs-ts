@@ -8,7 +8,10 @@
     "start": "NODE_ENV=production node ./next/production-server/index.js",
     "build": "next build && tsc --project tsconfig.server.json",
     "dev": "nodemon server/index.ts",
-    "lint": "tslint -c tslint.json -t stylish --fix **/*.ts"
+    "prettier": "prettier --config ./.prettierrc --write {pages,src}/**/*.ts",
+    "lint": "npm run prettier && npm run lint:ts && npm run lint:css",
+    "lint:ts": "tslint -c tslint.json -t stylish --fix {pages/src}/**/*.ts",
+    "lint:css": "stylelint --fix {src,pages}/**/*.css"
   },
   "keywords": [
     "nextjs",
@@ -41,6 +44,10 @@
     "postcss-css-variables": "^0.11.0",
     "postcss-nested": "^4.1.0",
     "postcss-preset-env": "^6.4.0",
+    "prettier": "^1.15.3",
+    "stylelint": "^9.9.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recommended": "^2.1.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",

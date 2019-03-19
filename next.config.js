@@ -7,7 +7,7 @@ const postcssPresetEnvOptions = {
   features: {
     'custom-media-queries': true,
     'custom-selectors': true,
-  }
+  },
 };
 
 module.exports = withTypeScript(
@@ -15,13 +15,10 @@ module.exports = withTypeScript(
     cssLoaderOptions: {
       camelCase: true,
       namedExport: true,
-      modules: true
+      modules: true,
     },
     postcssLoaderOptions: {
-      plugins: [
-        postcssPresetEnv(postcssPresetEnvOptions),
-        postcssNested()
-      ]
+      plugins: [postcssPresetEnv(postcssPresetEnvOptions), postcssNested()],
     },
     webpack(config, options) {
       if (!options.isServer) {
@@ -33,6 +30,6 @@ module.exports = withTypeScript(
         }
       }
       return config;
-    }
+    },
   })
 );
