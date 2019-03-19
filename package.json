@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
-    "start": "NODE_ENV=production node ./next/production-server/index.js",
+    "start": "NODE_ENV=production PORT=443 node ./.next/production-server/index.js",
     "build": "next build && tsc --project tsconfig.server.json",
     "dev": "nodemon server/index.ts",
     "prettier": "prettier  --write **/*.{ts,tsx,js,jsx}",
