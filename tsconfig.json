@@ -19,7 +19,8 @@
     "lib": ["dom", "es2015", "es2016"],
     "paths": {
       "@components/*": ["./src/components/*"],
-      "@common/*": ["./src/common"]
+      "@common/*": ["./src/common/*"],
+      "@store/*": ["./src/store/*"]
     }
   },
   "exclude": [

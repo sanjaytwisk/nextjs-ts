@@ -1,10 +1,16 @@
-import { main, mainAccent } from './styles.css';
+import { main, mainAccent } from './styles.css'
+import Counter from '@components/counter/Counter'
 
 /**
  * Homepage
  */
-export default () => (
-  <main className={`${main} ${mainAccent}`}>
-    <h1>Hello, world!</h1>
-  </main>
-);
+const HomePage = () => {
+  return (
+    <main className={`${main} ${mainAccent}`}>
+      <h1>Hello, world!</h1>
+      <Counter />
+    </main>
+  )
+}
+
+export default HomePage

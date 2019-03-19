@@ -9,7 +9,8 @@
             "root": ["./"],
             "alias": {
               "@components": "./src/components",
-              "@common": "./src/common"
+              "@common": "./src/common",
+              "@store": "./src/store"
             }
           }
         ]
@@ -24,7 +25,8 @@
             "root": ["./"],
             "alias": {
               "@components": "./src/components",
-              "@common": "./src/common"
+              "@common": "./src/common",
+              "@store": "./src/store"
             }
           }
         ]
@@ -49,7 +51,8 @@
             "root": ["./"],
             "alias": {
               "@components": "./src/components",
-              "@common": "./src/common"
+              "@common": "./src/common",
+              "@store": "./src/store"
             }
           }
         ]
