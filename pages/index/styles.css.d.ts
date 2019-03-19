@@ -1,2 +1,2 @@
-export const main: string;
-export const mainAccent: string;
+export const main: string
+export const mainAccent: string

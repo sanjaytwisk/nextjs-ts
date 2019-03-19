@@ -7,6 +7,8 @@
   ],
   "rules": {
     "curly": [true, "ignore-same-line"],
-    "ordered-imports": false
+    "ordered-imports": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false
   }
 }
