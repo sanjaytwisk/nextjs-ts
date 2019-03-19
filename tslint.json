@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "curly": [true, "ignore-same-line"],
+    "ordered-imports": false
+  }
+}
