@@ -1,10 +1,11 @@
 import React from 'react'
 import App, { Container, NextAppContext } from 'next/app'
-import '@common/css/variables.css'
 import withRedux from 'next-redux-wrapper'
 import { initStore, AppState } from '@store/store'
 import { Provider } from 'react-redux'
 import { Store } from 'redux'
+import '@common/css/variables.css'
+import '@common/css/colors.css'
 
 /**
  * withRedux HOC

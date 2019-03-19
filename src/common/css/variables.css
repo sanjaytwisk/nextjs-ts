@@ -1,5 +1,5 @@
 @custom-media --small (max-width: 500px);
 
 :root {
-  --color-brand-primary: #ffc300;
+  --size-grid-unit: 0.5rem;
 }

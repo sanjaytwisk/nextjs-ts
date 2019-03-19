@@ -2,6 +2,7 @@ import { increment, decrement } from '@store/counter/counterActions'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { AppState } from '@store/store'
+import Icon from '@components/icon/Icon'
 
 interface CounterProps {
   count: number
@@ -15,8 +16,12 @@ const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
   return (
     <>
       <h2>Count: {count}</h2>
-      <button onClick={onAdd}>Add</button>
-      <button onClick={onRemove}>Remove</button>
+      <button onClick={onAdd}>
+        <Icon name={'plus'} /> Add
+      </button>
+      <button onClick={onRemove}>
+        <Icon name={'minus'} /> Remove
+      </button>
     </>
   )
 }

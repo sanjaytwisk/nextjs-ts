@@ -10,6 +10,8 @@
     "ordered-imports": false,
     "no-submodule-imports": false,
     "no-implicit-dependencies": false,
-    "interface-name": false
+    "no-var-requires": false,
+    "interface-name": false,
+    "object-literal-sort-keys": false
   }
 }

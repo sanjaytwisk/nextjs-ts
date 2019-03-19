@@ -1,3 +1,4 @@
+const withPugins = require('next-compose-plugins')
 const withTypeScript = require('@zeit/next-typescript')
 const withCSS = require('@zeit/next-css')
 const postcssPresetEnv = require('postcss-preset-env')
@@ -11,31 +12,40 @@ const postcssPresetEnvOptions = {
   },
 }
 
-module.exports = withTypeScript(
-  withCSS({
-    cssLoaderOptions: {
-      camelCase: true,
-      namedExport: true,
-      modules: true,
-    },
-    postcssLoaderOptions: {
-      plugins: [postcssPresetEnv(postcssPresetEnvOptions), postcssNested()],
-    },
-    webpack(config, options) {
-      /* Add ts checker for error logs */
-      if (options.isServer) {
-        config.plugins.push(new ForkTsCheckerWebpackPlugin())
-      }
-      /* Add css modules typings generator */
-      if (!options.isServer) {
-        for (let entry of options.defaultLoaders.css) {
-          if (entry.loader === 'css-loader') {
-            entry.loader = 'typings-for-css-modules-loader'
-            break
-          }
-        }
-      }
-      return config
-    },
-  })
+const cssOptions = {
+  postcssLoaderOptions: {
+    plugins: [postcssPresetEnv(postcssPresetEnvOptions), postcssNested()],
+  },
+}
+
+const nextConfig = {
+  webpack(config, options) {
+    if (options.isServer) {
+      config.plugins.push(new ForkTsCheckerWebpackPlugin())
+    }
+    config.module.rules.push({
+      test: /\.svg$/,
+      include: /src\/components\/icon\/icons/,
+      use: [
+        'svg-sprite-loader',
+        {
+          loader: 'svgo-loader',
+          options: {
+            plugins: [
+              { removeAttrs: { attrs: '(fill)' } },
+              { removeTitle: true },
+              { cleanupIDs: true },
+              { removeStyleElement: true },
+            ],
+          },
+        },
+      ],
+    })
+    return config
+  },
+}
+
+module.exports = withPugins(
+  [[withTypeScript], [withCSS, cssOptions]],
+  nextConfig
 )

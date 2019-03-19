@@ -1,4 +1,4 @@
-import { main, mainAccent } from './styles.css'
+import './styles.css'
 import Counter from '@components/counter/Counter'
 
 /**
@@ -6,7 +6,7 @@ import Counter from '@components/counter/Counter'
  */
 const HomePage = () => {
   return (
-    <main className={`${main} ${mainAccent}`}>
+    <main className={`main main--accent`}>
       <h1>Hello, world!</h1>
       <Counter />
     </main>

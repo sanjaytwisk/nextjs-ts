@@ -15,7 +15,7 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types"],
+    "typeRoots": ["./node_modules/@types", "./types"],
     "lib": ["dom", "es2015", "es2016"],
     "paths": {
       "@components/*": ["./src/components/*"],
