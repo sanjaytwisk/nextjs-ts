@@ -64,6 +64,7 @@
     "husky": "^1.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "jest-svg-transformer": "^1.0.0",
     "lint-staged": "^8.1.0",
     "next-compose-plugins": "^2.1.1",
     "nodemon": "^1.18.7",
