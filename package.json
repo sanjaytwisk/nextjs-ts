@@ -1,7 +1,7 @@
 {
   "name": "nextjs-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for NextJS",
+  "description": "NextJS boilerplate with TypeScript and Redux",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
@@ -35,9 +35,23 @@
   },
   "keywords": [
     "nextjs",
-    "boilerplate"
+    "boilerplate",
+    "typeccript",
+    "react",
+    "redux",
+    "prettier",
+    "stylelint",
+    "jest",
+    "enzyme",
+    "svg sprite",
+    "husky",
+    "lint staged"
   ],
   "author": "Sanjay Twisk",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sanjaytwisk/nextjs-ts.git"
+  },
   "license": "ISC",
   "dependencies": {
     "next": "^8.0.3",
