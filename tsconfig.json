@@ -19,6 +19,7 @@
     "lib": ["dom", "es2015", "es2016"],
     "paths": {
       "@components/*": ["./src/components/*"],
+      "@containers/*": ["./src/containers/*"],
       "@common/*": ["./src/common/*"],
       "@store/*": ["./src/store/*"]
     }

@@ -1,7 +1,3 @@
-import { increment, decrement } from '@store/counter/counterActions'
-import { connect } from 'react-redux'
-import { Dispatch } from 'redux'
-import { AppState } from '@store/store'
 import Icon from '@components/icon/Icon'
 
 interface CounterProps {
@@ -26,16 +22,4 @@ const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
   )
 }
 
-const mapStateToProps = ({ counter }: AppState) => ({
-  count: counter.count,
-})
-
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  add: () => dispatch(increment),
-  remove: () => dispatch(decrement),
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Counter)
+export default Counter
