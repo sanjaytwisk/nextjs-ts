@@ -1,8 +1,15 @@
 import { increment, decrement } from '@store/counter/counterActions'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import { AppState } from '@store/store'
 
-const Counter = ({ count, add, remove }) => {
+interface CounterProps {
+  count: number
+  add: () => void
+  remove: () => void
+}
+
+const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
   const onAdd = () => add()
   const onRemove = () => remove()
   return (
@@ -14,7 +21,7 @@ const Counter = ({ count, add, remove }) => {
   )
 }
 
-const mapStateToProps = ({ counter }) => ({
+const mapStateToProps = ({ counter }: AppState) => ({
   count: counter.count,
 })
 

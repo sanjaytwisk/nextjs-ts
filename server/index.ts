@@ -11,7 +11,7 @@ const startApp = async () => {
   await app.prepare()
   createServer((req, res) =>
     handle(req, res, parse(req.url || '', true))
-  ).listen(port, err => {
+  ).listen(port, (err: Error) => {
     if (err) throw err
     console.log(`> Ready on http://localhost:${port}`) // tslint:disable-line
   })

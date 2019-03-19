@@ -10,15 +10,16 @@
     "dev": "nodemon server/index.ts",
     "prettier": "prettier  --write **/*.{ts,tsx,js,jsx}",
     "lint:ts": "npm run prettier && tslint -c tslint.json -t stylish --fix {pages/src}/**/*.{ts,tsx}",
-    "lint:css": "stylelint --fix {src,pages}/**/*.css"
+    "lint:css": "stylelint --fix {src,pages}/**/*.css",
+    "lint:types": "tsc -p . --noEmit"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run lint:types"
     }
   },
   "lint-staged": {
-    "*.ts": [
+    "*.{ts,tsx}": [
       "npm run lint:ts",
       "git add"
     ],
@@ -58,6 +59,7 @@
     "babel-plugin-module-resolver": "^3.1.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
+    "fork-ts-checker-webpack-plugin": "^0.5.0",
     "husky": "^1.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
