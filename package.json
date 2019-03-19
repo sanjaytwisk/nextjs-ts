@@ -9,6 +9,7 @@
     "start": "NODE_ENV=production PORT=$PORT node ./.next/production-server/index.js",
     "build": "rm -rf .next && next build && tsc --project tsconfig.server.json",
     "dev": "nodemon server/index.ts",
+    "export": "npm run build && next export",
     "prettier": "prettier  --write **/*.{ts,tsx,js,jsx}",
     "lint:ts": "npm run prettier && tslint -c tslint.json -t stylish --fix {pages/src}/**/*.{ts,tsx}",
     "lint:css": "stylelint --fix {src,pages}/**/*.css",
