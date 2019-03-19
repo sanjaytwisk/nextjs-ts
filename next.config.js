@@ -4,11 +4,11 @@ const {
 } = require('next/constants')
 
 const getBuildConfig = (...args) => {
+  const path = require('path')
   const withPugins = require('next-compose-plugins')
   const withTypeScript = require('@zeit/next-typescript')
-  const withCSS = require('@zeit/next-css')
+  const withSCSS = require('@zeit/next-sass')
   const postcssPresetEnv = require('postcss-preset-env')
-  const postcssNested = require('postcss-nested')
   const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
   const postcssPresetEnvOptions = {
     features: {
@@ -19,7 +19,10 @@ const getBuildConfig = (...args) => {
 
   const cssOptions = {
     postcssLoaderOptions: {
-      plugins: [postcssPresetEnv(postcssPresetEnvOptions), postcssNested()],
+      plugins: [postcssPresetEnv(postcssPresetEnvOptions)],
+    },
+    sassLoaderOptions: {
+      includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
     },
   }
 
@@ -49,7 +52,7 @@ const getBuildConfig = (...args) => {
       return config
     },
   }
-  return withPugins([[withTypeScript], [withCSS, cssOptions]], nextConfig)(
+  return withPugins([[withTypeScript], [withSCSS, cssOptions]], nextConfig)(
     ...args
   )
 }

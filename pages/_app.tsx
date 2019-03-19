@@ -4,8 +4,8 @@ import withRedux from 'next-redux-wrapper'
 import { initStore, AppState } from '@store/store'
 import { Provider } from 'react-redux'
 import { Store } from 'redux'
-import '@common/css/variables.css'
-import '@common/css/colors.css'
+import '@common/css/variables.scss'
+import '@common/css/colors.scss'
 
 /**
  * withRedux HOC

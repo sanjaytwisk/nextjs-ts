@@ -69,8 +69,37 @@ You can write your tests using Jest and Enzyme. You can run all test with the fo
 ```sh
 $ npm run test
 ```
+
 If you want to follow test driven development you can use:
 
 ```sh
 $ npm run test:dev
+```
+
+## Modules
+
+**TypeScript**
+
+TypeScript and Babel are pre-configured with custom module resolvers.
+This means you can use absolute imports with custom namespaces by default for the following modules:
+
+```js
+/* import common library */
+import lib from '@common/<folder>/<lib>'
+/* import component */
+import Counter from '@components/counter/Counter'
+/* import container */
+import HomepageCounter from '@containers/counter/HomepageCounter'
+/* import store files */
+import { CounterAction } from '@store/counter/counterActions'
+```
+
+**SCSS**
+
+By default the path `./src/common/css` is configured as an included path for our scss loader.
+This means you can import any of this folder's files directly without the relative or absolute path:
+
+```css
+@import 'variables';
+@import 'colors';
 ```

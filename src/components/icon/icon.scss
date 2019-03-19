@@ -1,0 +1,22 @@
+@import 'variables';
+$size-icon: $size-grid-unit * 2;
+
+.icon {
+  vertical-align: middle;
+  display: inline-block;
+
+  &--small {
+    width: $size-icon;
+    height: $size-icon;
+  }
+
+  &--medium {
+    width: $size-icon * 1.5;
+    height: $size-icon * 1.5;
+  }
+
+  &--large {
+    width: $size-icon * 4;
+    height: $size-icon * 4;
+  }
+}
