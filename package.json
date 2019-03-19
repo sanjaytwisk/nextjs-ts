@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "next start",
-    "build": "next build",
-    "dev": "next"
+    "start": "NODE_ENV=production node ./next/production-server/index.js",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "dev": "nodemon server/index.ts"
   },
   "keywords": [
     "nextjs",
@@ -16,8 +16,19 @@
   "author": "Sanjay Twisk",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-loader": "^8.0.4",
     "next": "^7.0.2",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "typescript": "^3.2.1",
+    "typescript-babel-jest": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/next": "^7.0.5",
+    "@types/react": "^16.7.10",
+    "nodemon": "^1.18.7",
+    "ts-node": "^7.0.1"
   }
 }
