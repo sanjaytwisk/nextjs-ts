@@ -12,7 +12,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 - 👀 Lint your code with TSLint & Stylelint
 - 🌈 Prettier for consistent code style
 - 🔨 Jest + Enzyme for tests
-- ☝️ Husy + lint-staged for code quality assurance
+- ☝️ Husky + lint-staged for code quality assurance
 - ⚙️ Editorconfig file for consistent indents
 - 🗄 Redux with `react-redux` and `redux-thunk`
 
