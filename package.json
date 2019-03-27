@@ -11,8 +11,8 @@
     "dev": "nodemon server/index.ts",
     "export": "npm run build && next export",
     "prettier": "prettier  --write **/*.{ts,tsx,js,jsx}",
-    "lint:ts": "npm run prettier && tslint -c tslint.json -t stylish --fix {pages/src}/**/*.{ts,tsx}",
-    "lint:css": "stylelint --fix {src,pages}/**/*.css",
+    "lint:ts": "npm run prettier && tslint -c tslint.json -t stylish --fix {pages,src,server}/**/*.{ts,tsx}",
+    "lint:scss": "stylelint --fix {src,pages}/**/*.scss",
     "lint:types": "tsc -p . --noEmit"
   },
   "husky": {
@@ -28,8 +28,8 @@
       "npm run lint:ts",
       "git add"
     ],
-    "*.css": [
-      "npm run lint:css",
+    "*.scss": [
+      "npm run lint:scss",
       "git add"
     ]
   },
