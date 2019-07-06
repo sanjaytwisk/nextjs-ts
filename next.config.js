@@ -5,7 +5,7 @@ const {
 
 const getBuildConfig = (...args) => {
   const path = require('path')
-  const withPugins = require('next-compose-plugins')
+  const withPlugins = require('next-compose-plugins')
   const withTypeScript = require('@zeit/next-typescript')
   const withSCSS = require('@zeit/next-sass')
   const postcssPresetEnv = require('postcss-preset-env')
@@ -19,10 +19,14 @@ const getBuildConfig = (...args) => {
 
   const cssOptions = {
     postcssLoaderOptions: {
-      plugins: [postcssPresetEnv(postcssPresetEnvOptions)],
+      plugins: [
+        postcssPresetEnv(postcssPresetEnvOptions)
+      ],
     },
     sassLoaderOptions: {
-      includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
+      includePaths: [
+        path.join(process.cwd(), 'src', 'common', 'css')
+      ],
     },
   }
 
@@ -52,13 +56,21 @@ const getBuildConfig = (...args) => {
       return config
     },
   }
-  return withPugins([[withTypeScript], [withSCSS, cssOptions]], nextConfig)(
+  return withPlugins(
+    [
+      [withTypeScript],
+      [withSCSS, cssOptions]
+    ],
+    nextConfig
+  )(
     ...args
   )
 }
 
 module.exports = (phase, ...rest) => {
-  const shouldAddBuildConfig =
-    phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD
+  const shouldAddBuildConfig = (
+    phase === PHASE_DEVELOPMENT_SERVER ||
+    phase === PHASE_PRODUCTION_BUILD
+  );
   return shouldAddBuildConfig ? getBuildConfig(phase, ...rest) : {}
 }
