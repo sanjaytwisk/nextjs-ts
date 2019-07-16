@@ -14,17 +14,39 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
     "baseUrl": ".",
-    "typeRoots": ["./node_modules/@types", "./types"],
-    "lib": ["dom", "es2015", "es2016"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@containers/*": ["./src/containers/*"],
-      "@common/*": ["./src/common/*"],
-      "@store/*": ["./src/store/*"]
-    }
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@containers/*": [
+        "./src/containers/*"
+      ],
+      "@common/*": [
+        "./src/common/*"
+      ],
+      "@store/*": [
+        "./src/store/*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
   "exclude": [
+    "dist",
+    ".next",
+    "out",
     "node_modules",
     "next.config.js",
     "postcss.config.js",

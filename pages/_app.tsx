@@ -1,5 +1,5 @@
 import React from 'react'
-import App, { Container, NextAppContext } from 'next/app'
+import App, { Container, AppContext } from 'next/app'
 import withRedux from 'next-redux-wrapper'
 import { initStore, AppState } from '@store/store'
 import { Provider } from 'react-redux'
@@ -13,7 +13,7 @@ import '@common/css/colors.scss'
  */
 export default withRedux(initStore)(
   class CustomApp extends App<{ store: Store<AppState> }> {
-    public static async getInitialProps({ Component, ctx }: NextAppContext) {
+    public static async getInitialProps({ Component, ctx }: AppContext) {
       const pageProps = Component.getInitialProps
         ? await Component.getInitialProps(ctx)
         : {}

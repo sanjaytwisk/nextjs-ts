@@ -1,6 +1,6 @@
 import { createServer } from 'http'
 import { parse } from 'url'
-import * as next from 'next'
+import next from 'next'
 
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000
 const dev = process.env.NODE_ENV !== 'production'

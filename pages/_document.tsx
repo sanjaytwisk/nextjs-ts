@@ -2,14 +2,14 @@ import Document, {
   Head,
   Main,
   NextScript,
-  NextDocumentContext,
+  DocumentContext,
 } from 'next/document'
 const sprite = require('svg-sprite-loader/runtime/sprite.build')
 
 export default class CustomDocument extends Document<{
   spriteContent: string
 }> {
-  public static async getInitialProps(ctx: NextDocumentContext) {
+  public static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
     const spriteContent = sprite.stringify()
 
