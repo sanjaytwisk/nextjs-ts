@@ -4,7 +4,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 
 **Features**
 
-- 👏🏼 Next 8
+- 👏🏼 Next 9
 - 🌊 Custom server, Document and App
 - ⌨️ Type safety using TypeScript in strict mode
 - 💄 Write SCSS & future CSS with PostCSS + preset-env
