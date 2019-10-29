@@ -1,5 +1,5 @@
 import React from 'react'
-import App, { Container, AppContext } from 'next/app'
+import App, { AppContext } from 'next/app'
 import withRedux from 'next-redux-wrapper'
 import { initStore, AppState } from '@store/store'
 import { Provider } from 'react-redux'
@@ -23,11 +23,9 @@ export default withRedux(initStore)(
     public render() {
       const { Component, pageProps, store } = this.props
       return (
-        <Container>
-          <Provider store={store}>
-            <Component {...pageProps} />
-          </Provider>
-        </Container>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       )
     }
   }
