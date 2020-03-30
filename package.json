@@ -100,6 +100,6 @@
     "tslint-config-prettier": "1.17.0",
     "tslint-eslint-rules": "5.4.0",
     "tslint-react": "4.1.0",
-    "typescript": "3.6.4"
+    "typescript": "3.8.3"
   }
 }
