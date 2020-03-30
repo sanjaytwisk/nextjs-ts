@@ -47,9 +47,7 @@ const getBuildConfig = (...args) => {
       return config
     },
   }
-  return withPugins([[withSCSS, cssOptions]], nextConfig)(
-    ...args
-  )
+  return withPugins([[withSCSS, cssOptions]], nextConfig)(...args)
 }
 
 module.exports = (phase, ...rest) => {
