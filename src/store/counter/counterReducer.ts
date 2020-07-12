@@ -27,6 +27,8 @@ export default (
         ...state,
         count: count > 0 ? count - 1 : 0,
       }
+    case CounterActionTypes.RESET:
+      return initialCounterState
     default:
       return state
   }

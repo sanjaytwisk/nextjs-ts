@@ -56,7 +56,7 @@
   "dependencies": {
     "next": "9.3.2",
     "next-compose-plugins": "2.2.0",
-    "next-redux-wrapper": "5.0.0",
+    "next-redux-wrapper": "6.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-redux": "7.2.0",
@@ -68,7 +68,6 @@
   "devDependencies": {
     "@babel/core": "7.9.0",
     "@types/jest": "25.1.4",
-    "@types/next-redux-wrapper": "3.0.0",
     "@types/node": "13.9.5",
     "@types/react": "16.9.27",
     "@types/react-redux": "7.1.7",
