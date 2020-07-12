@@ -1,9 +1,6 @@
-import React from 'react'
-import App, { AppContext } from 'next/app'
-import withRedux from 'next-redux-wrapper'
-import { initStore, AppState } from '@store/store'
-import { Provider } from 'react-redux'
-import { Store } from 'redux'
+import React, { FC } from 'react'
+import { AppProps } from 'next/app'
+import { storeWrapper } from '@store/store'
 import '@common/css/variables.scss'
 import '@common/css/colors.scss'
 
@@ -11,22 +8,9 @@ import '@common/css/colors.scss'
  * withRedux HOC
  * NextJS wrapper for Redux
  */
-export default withRedux(initStore)(
-  class CustomApp extends App<{ store: Store<AppState> }> {
-    public static async getInitialProps({ Component, ctx }: AppContext) {
-      const pageProps = Component.getInitialProps
-        ? await Component.getInitialProps(ctx)
-        : {}
-      return { pageProps }
-    }
 
-    public render() {
-      const { Component, pageProps, store } = this.props
-      return (
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
-      )
-    }
-  }
+const CustomApp: FC<AppProps> = ({ Component, pageProps }) => (
+  <Component {...pageProps} />
 )
+
+export default storeWrapper.withRedux(CustomApp)
