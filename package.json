@@ -25,12 +25,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run lint:ts",
-      "git add"
+      "npm run lint:ts"
     ],
     "*.scss": [
-      "npm run lint:scss",
-      "git add"
+      "npm run lint:scss"
     ]
   },
   "keywords": [
