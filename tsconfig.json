@@ -55,5 +55,10 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "coverage"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }
