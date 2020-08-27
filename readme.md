@@ -18,7 +18,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 
 ## Getting started
 
-Before you can start developing your awesome application you need to install the project's dependencies. Make sure you have Node and NPM installed and run:
+Before you can start developing your awesome application you need to install the project's dependencies. Make sure you have Node (>= 10.13.0) and NPM installed and run:
 
 ```sh
 $ npm install
