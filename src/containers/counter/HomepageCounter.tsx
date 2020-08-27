@@ -1,5 +1,5 @@
 import { increment, decrement } from '@store/counter/counterActions'
-import Counter from '@components/counter/Counter'
+import { Counter } from '@components/counter/Counter'
 import { AppState } from '@store/store'
 import { Dispatch } from 'redux'
 import { connect } from 'react-redux'
@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
   remove: () => dispatch(decrement),
 })
 
-export default connect(
+export const HomepageCounter = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Counter)

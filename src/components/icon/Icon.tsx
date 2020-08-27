@@ -14,7 +14,7 @@ interface IconProps {
 /**
  * Icon
  */
-const Icon: React.SFC<IconProps> = ({ name, size = 'small' }) => {
+export const Icon: React.SFC<IconProps> = ({ name, size = 'small' }) => {
   const { viewBox, id } = icons[name]
   return (
     <span className={`icon icon--${size}`}>
@@ -24,5 +24,3 @@ const Icon: React.SFC<IconProps> = ({ name, size = 'small' }) => {
     </span>
   )
 }
-
-export default Icon

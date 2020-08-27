@@ -11,7 +11,7 @@ const initialCounterState = {
 /**
  * Counter Reducer
  */
-export default (
+export const counterReducer = (
   state: CounterState = initialCounterState,
   action: CounterAction
 ) => {

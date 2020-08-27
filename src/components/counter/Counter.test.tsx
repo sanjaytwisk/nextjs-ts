@@ -1,5 +1,5 @@
 import { shallow } from 'enzyme'
-import Counter from './Counter'
+import { Counter } from './Counter'
 
 describe('Counter', () => {
   it('should render the text `Count: <count>` for the given count prop', () => {

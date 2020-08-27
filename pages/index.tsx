@@ -1,4 +1,4 @@
-import HomepageCounter from '@containers/counter/HomepageCounter'
+import { HomepageCounter } from '@containers/counter/HomepageCounter'
 import Link from 'next/link'
 
 /**

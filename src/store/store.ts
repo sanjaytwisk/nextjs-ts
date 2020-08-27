@@ -9,13 +9,13 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 import { createWrapper, MakeStore, HYDRATE } from 'next-redux-wrapper'
 
-import counter, { CounterState } from './counter/counterReducer'
+import { counterReducer, CounterState } from './counter/counterReducer'
 
 export interface AppState {
   counter: CounterState
 }
 
-const combinedReducers = combineReducers({ counter })
+const combinedReducers = combineReducers({ counter: counterReducer })
 
 const reducer: Reducer<AppState, AnyAction> = (state, action) => {
   if (action.type === HYDRATE) {

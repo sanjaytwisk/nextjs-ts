@@ -1,4 +1,4 @@
-import Icon from '@components/icon/Icon'
+import { Icon } from '@components/icon/Icon'
 
 interface CounterProps {
   count: number
@@ -6,7 +6,7 @@ interface CounterProps {
   remove: () => void
 }
 
-const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
+export const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
   const onAdd = () => add()
   const onRemove = () => remove()
   return (
@@ -21,5 +21,3 @@ const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
     </>
   )
 }
-
-export default Counter
