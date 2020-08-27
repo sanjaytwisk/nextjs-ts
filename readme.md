@@ -5,7 +5,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 **Features**
 
 - 👏🏼 Next 9.5
-- 🌊 Custom server, Document and App
+- 🌊 Custom Document and App
 - ⌨️ Type safety using TypeScript in strict mode
 - 💄 Write SCSS & future CSS with PostCSS + preset-env
 - 🖊 SVG sprite for icons
@@ -15,6 +15,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 - ☝️ Husky + lint-staged for code quality assurance
 - ⚙️ Editorconfig file for consistent indents
 - 🗄 Redux with `react-redux` and `redux-thunk`
+- 🏄‍♂️ Custom server boilerplate can be found [here](https://github.com/sanjaytwisk/nextjs-ts/tree/custom-server)
 
 ## Getting started
 
