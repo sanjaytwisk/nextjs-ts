@@ -52,7 +52,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "next": "9.5.2",
+    "next": "9.5.4",
     "next-compose-plugins": "2.2.0",
     "next-redux-wrapper": "6.0.2",
     "react": "16.13.1",
