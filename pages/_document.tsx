@@ -1,4 +1,5 @@
 import Document, {
+  Html,
   Head,
   Main,
   NextScript,
@@ -21,14 +22,14 @@ export default class CustomDocument extends Document<{
 
   public render() {
     return (
-      <html>
+      <Html>
         <Head>{/* your head if needed */}</Head>
         <body>
           <div dangerouslySetInnerHTML={{ __html: this.props.spriteContent }} />
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }
