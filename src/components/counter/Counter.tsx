@@ -1,4 +1,5 @@
 import { Icon } from '@components/icon/Icon'
+import styles from './counter.module.scss'
 
 interface CounterProps {
   count: number
@@ -10,7 +11,7 @@ export const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
   const onAdd = () => add()
   const onRemove = () => remove()
   return (
-    <>
+    <div className={styles.counter}>
       <h2>Count: {count}</h2>
       <button onClick={onAdd}>
         <Icon name={'plus'} /> Add
@@ -18,6 +19,6 @@ export const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
       <button onClick={onRemove}>
         <Icon name={'minus'} /> Remove
       </button>
-    </>
+    </div>
   )
 }

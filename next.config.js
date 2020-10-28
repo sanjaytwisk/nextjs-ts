@@ -3,10 +3,8 @@ const {
   PHASE_PRODUCTION_BUILD,
 } = require('next/constants')
 
-const getBuildConfig = (...args) => {
+const getBuildConfig = () => {
   const path = require('path')
-  const withPugins = require('next-compose-plugins')
-  const withSCSS = require('@zeit/next-sass')
   const postcssPresetEnv = require('postcss-preset-env')
   const postcssPresetEnvOptions = {
     features: {
@@ -19,12 +17,13 @@ const getBuildConfig = (...args) => {
     postcssLoaderOptions: {
       plugins: [postcssPresetEnv(postcssPresetEnvOptions)],
     },
-    sassLoaderOptions: {
+    sassOptions: {
       includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
     },
   }
 
   const nextConfig = {
+    ...cssOptions,
     webpack(config) {
       config.module.rules.push({
         test: /\.svg$/,
@@ -47,11 +46,11 @@ const getBuildConfig = (...args) => {
       return config
     },
   }
-  return withPugins([[withSCSS, cssOptions]], nextConfig)(...args)
+  return nextConfig
 }
 
-module.exports = (phase, ...rest) => {
+module.exports = (phase) => {
   const shouldAddBuildConfig =
     phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD
-  return shouldAddBuildConfig ? getBuildConfig(phase, ...rest) : {}
+  return shouldAddBuildConfig ? getBuildConfig() : {}
 }
