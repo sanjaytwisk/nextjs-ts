@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as icons from './icons'
-import './icon.scss'
+import styles from './icon.module.scss'
 
 export type Icons = typeof icons
 export type IconName = keyof Icons
@@ -17,7 +17,7 @@ interface IconProps {
 export const Icon: React.SFC<IconProps> = ({ name, size = 'small' }) => {
   const { viewBox, id } = icons[name]
   return (
-    <span className={`icon icon--${size}`}>
+    <span className={`${styles.icon} ${styles[`icon--${size}`]}`}>
       <svg viewBox={viewBox}>
         <use xlinkHref={`#${id}`} href={`#${id}`} />
       </svg>
