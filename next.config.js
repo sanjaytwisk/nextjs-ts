@@ -27,7 +27,7 @@ const getBuildConfig = () => {
     webpack(config) {
       config.module.rules.push({
         test: /\.svg$/,
-        include: /src\/components\/icon\/icons/,
+        include: path.join(process.cwd(), 'src', 'components', 'icon', 'icons'),
         use: [
           'svg-sprite-loader',
           {
