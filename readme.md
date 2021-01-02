@@ -10,7 +10,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 - ⌨️ Type safety using TypeScript in strict mode
 - 💄 Write SCSS & future CSS with PostCSS + preset-env
 - 🖊 SVG sprite for icons
-- 👀 Lint your code with TSLint & Stylelint
+- 👀 Lint your code with ESLint & Stylelint
 - 🌈 Prettier for consistent code style
 - 🔨 Jest + Enzyme for tests
 - ☝️ Husky + lint-staged for code quality assurance

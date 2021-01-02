@@ -4,7 +4,7 @@ import Link from 'next/link'
 /**
  * Homepage
  */
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <main>
       <h1>Hello, world!</h1>

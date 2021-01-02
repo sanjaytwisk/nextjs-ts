@@ -5,7 +5,7 @@ import { reset } from '../src/store/counter/counterActions'
 /**
  * Homepage
  */
-const ResetPage = () => {
+const ResetPage: React.FC = () => {
   return (
     <main>
       <Link href={'/'}>
