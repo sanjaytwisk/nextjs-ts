@@ -12,7 +12,7 @@
     "export": "npm run build && next export",
     "prettier": "prettier  --write **/*.{ts,tsx,js}",
     "lint:ts": "npm run prettier && eslint --fix '{pages,src,server}/**/*.{ts,tsx}'",
-    "lint:scss": "stylelint --fix {src,pages}/**/*.scss",
+    "lint:scss": "stylelint --fix '{src,pages}/**/*.scss'",
     "lint:types": "tsc -p . --noEmit"
   },
   "husky": {
@@ -25,10 +25,10 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npm run lint:ts"
+      "eslint --fix"
     ],
     "*.scss": [
-      "npm run lint:scss"
+      "stylelint --fix"
     ]
   },
   "keywords": [
