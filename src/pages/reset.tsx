@@ -1,7 +1,7 @@
 import { HomepageCounter } from '@containers/counter/HomepageCounter'
 import Link from 'next/link'
-import { storeWrapper } from '../src/store/store'
-import { reset } from '../src/store/counter/counterActions'
+import { storeWrapper } from '../store/store'
+import { reset } from '@store/counter/counterActions'
 /**
  * Homepage
  */

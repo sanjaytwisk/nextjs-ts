@@ -11,8 +11,8 @@
     "dev": "next dev",
     "export": "npm run build && next export",
     "prettier": "prettier  --write **/*.{ts,tsx,js}",
-    "lint:ts": "npm run prettier && eslint --fix '{pages,src,server}/**/*.{ts,tsx}'",
-    "lint:scss": "stylelint --fix '{src,pages}/**/*.scss'",
+    "lint:ts": "npm run prettier && eslint --fix 'src/**/*.{ts,tsx}'",
+    "lint:scss": "stylelint --fix 'src/**/*.scss'",
     "lint:types": "tsc -p . --noEmit"
   },
   "husky": {
