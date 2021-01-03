@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "outDir": ".next/production-server",
+    "isolatedModules": false,
+    "noEmit": false
+  },
+  "include": ["server/**/*.ts"]
+}

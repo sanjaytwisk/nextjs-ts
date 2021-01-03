@@ -17,26 +17,6 @@ An opinionated boilerplate to kickstart projects using NextJS
 - ⚙️ Editorconfig file for consistent indents
 - 🗄 Redux with `react-redux` and `redux-thunk`
 
-## Variation branches
-
-### [Custom server](https://github.com/sanjaytwisk/nextjs-ts/tree/custom-server)
-
-```sh
-git clone -b custom-server --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
-```
-
-### [Enzyme](https://github.com/sanjaytwisk/nextjs-ts/tree/enzyme)
-
-```sh
-git clone -b enzyme --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
-```
-
-### [No redux](https://github.com/sanjaytwisk/nextjs-ts/tree/no-redux)
-
-```sh
-git clone -b no-redux --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
-```
-
 ## Getting started
 
 Before you can start developing your awesome application you need to install the project's dependencies. Make sure you have Node (>= 10.13.0) and NPM installed and run:
