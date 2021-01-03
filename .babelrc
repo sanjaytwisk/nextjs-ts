@@ -43,7 +43,7 @@
               "modules": "commonjs"
             }
           }
-        ],
+        ]
       ],
       "plugins": [
         [
