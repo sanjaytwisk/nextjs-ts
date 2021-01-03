@@ -1,7 +1,7 @@
 const TEST_REGEX = '(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|jsx?|tsx?|ts?)$'
 
 module.exports = {
-  setupFiles: ['<rootDir>/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testRegex: TEST_REGEX,
   transform: {
     '^.+\\.tsx?$': 'babel-jest',

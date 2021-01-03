@@ -12,7 +12,7 @@ export const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
   const onRemove = () => remove()
   return (
     <div className={styles.counter}>
-      <h2>Count: {count}</h2>
+      <h2 data-testid="counter-output">Count: {count}</h2>
       <button onClick={onAdd}>
         <Icon name={'plus'} /> Add
       </button>
