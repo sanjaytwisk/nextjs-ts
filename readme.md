@@ -17,10 +17,19 @@ An opinionated boilerplate to kickstart projects using NextJS
 - ⚙️ Editorconfig file for consistent indents
 - 🗄 Redux with `react-redux` and `redux-thunk`
 
-**Variation branches**
+## Variation branches
 
-- [custom-server](https://github.com/sanjaytwisk/nextjs-ts/tree/custom-server)
-- [enzyme](https://github.com/sanjaytwisk/nextjs-ts/tree/enzyme)
+### [Custom server](https://github.com/sanjaytwisk/nextjs-ts/tree/custom-server)
+
+```sh
+git clone -b custom-server --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
+```
+
+### [Enzyme](https://github.com/sanjaytwisk/nextjs-ts/tree/enzyme)
+
+```sh
+git clone -b enzyme --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
+```
 
 ## Getting started
 
