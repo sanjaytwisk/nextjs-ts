@@ -12,30 +12,10 @@ An opinionated boilerplate to kickstart projects using NextJS
 - 🖊 SVG sprite for icons
 - 👀 Lint your code with ESLint & Stylelint
 - 🌈 Prettier for consistent code style
-- 🔨 Jest + [Testing Library](https://testing-library.com/) for tests
+- 🔨 Jest + Enzyme for tests
 - ☝️ Husky + lint-staged for code quality assurance
 - ⚙️ Editorconfig file for consistent indents
 - 🗄 Redux with `react-redux` and `redux-thunk`
-
-## Variation branches
-
-### [Custom server](https://github.com/sanjaytwisk/nextjs-ts/tree/custom-server)
-
-```sh
-git clone -b custom-server --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
-```
-
-### [Enzyme](https://github.com/sanjaytwisk/nextjs-ts/tree/enzyme)
-
-```sh
-git clone -b enzyme --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
-```
-
-### [No redux](https://github.com/sanjaytwisk/nextjs-ts/tree/no-redux)
-
-```sh
-git clone -b no-redux --single-branch git@github.com:sanjaytwisk/nextjs-ts.git
-```
 
 ## Getting started
 
