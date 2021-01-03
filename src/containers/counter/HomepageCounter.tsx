@@ -1,19 +1,9 @@
-import { increment, decrement } from '@store/counter/counterActions'
 import { Counter } from '@components/counter/Counter'
-import { AppState } from '@store/store'
-import { Dispatch } from 'redux'
-import { connect } from 'react-redux'
+import React, { useState } from 'react'
 
-const mapStateToProps = ({ counter }: AppState) => ({
-  count: counter.count,
-})
-
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  add: () => dispatch(increment),
-  remove: () => dispatch(decrement),
-})
-
-export const HomepageCounter = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Counter)
+export const HomepageCounter: React.FC = () => {
+  const [count, setCount] = useState(0)
+  const add = () => setCount(count + 1)
+  const remove = () => setCount(count > 0 ? count - 1 : count)
+  return <Counter count={count} add={add} remove={remove} />
+}
