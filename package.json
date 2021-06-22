@@ -4,7 +4,7 @@
   "description": "NextJS boilerplate with TypeScript and Redux",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --passWithNoTests",
     "test:dev": "NODE_ENV=test jest --watchAll",
     "start": "NODE_ENV=production PORT=$PORT next start",
     "build": "rm -rf .next && next build",
