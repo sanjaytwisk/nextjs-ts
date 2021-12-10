@@ -10,13 +10,13 @@
     "media-feature-name-no-vendor-prefix": true,
     "declaration-property-value-whitelist": {
       "/color$/": [
-        "/^\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba/"
+        "/^colors.\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba|var/"
       ],
       "fill": [
-        "/^\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba/"
+        "^colors.\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba|var/"
       ],
       "stroke": [
-        "/^\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba/"
+        "^colors.\\$|initial|inherit|transparent|currentColor|darken|lighten|rgba|var/"
       ]
     },
     "scss/at-rule-no-unknown": true,

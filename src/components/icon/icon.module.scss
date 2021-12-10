@@ -1,5 +1,6 @@
-@import 'variables';
-$size-icon: $size-grid-unit * 2;
+@use 'variables';
+
+$size-icon: variables.$size-grid-unit * 2;
 
 .icon {
   vertical-align: middle;
