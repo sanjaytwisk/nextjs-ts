@@ -2,6 +2,7 @@ import { HomepageCounter } from '@containers/counter/HomepageCounter'
 import Link from 'next/link'
 import { storeWrapper } from '../store/store'
 import { reset } from '@store/counter/counterActions'
+
 /**
  * Homepage
  */
@@ -17,8 +18,9 @@ const ResetPage: React.FC = () => {
 }
 
 export const getServerSideProps = storeWrapper.getServerSideProps(
-  async ({ store }) => {
+  (store) => async () => {
     store.dispatch(reset)
+    return { props: {} }
   }
 )
 
