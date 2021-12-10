@@ -4,7 +4,7 @@ An opinionated boilerplate to kickstart projects using NextJS
 
 **Features**
 
-- 👏🏼 Next 11
+- 👏🏼 Next 12
 - ⚛️ React 17
 - 🌊 Custom Document and App
 - ⌨️ Type safety using TypeScript in strict mode
