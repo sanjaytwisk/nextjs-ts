@@ -1,17 +1,32 @@
+const nextJest = require('next/jest')
 const TEST_REGEX = '(/__tests__/.*|(\\.|/)(test|spec))\\.(js?|jsx?|tsx?|ts?)$'
 
-module.exports = {
+
+const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testRegex: TEST_REGEX,
-  testEnvironment: 'jsdom',
-  transform: {
-    '^.+\\.tsx?$': 'babel-jest',
-    '^.+\\.svg$': 'jest-transform-stub',
-  },
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  testEnvironment: 'jest-environment-jsdom',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   collectCoverage: false,
-  moduleNameMapper: {
-    '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
-  },
+}
+
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+})(customJestConfig)
+
+
+module.exports = async () => {
+  const jestConfig = await createJestConfig()
+  const moduleNameMapper = {
+    ...jestConfig.moduleNameMapper,
+    '^@components/(.*)$': '<rootDir>/src/components/$1',
+    '^@containers/(.*)$': '<rootDir>/src/containers/$1',
+    '^@common/(.*)$': '<rootDir>/src/common/$1',
+    '^@store/(.*)$': '<rootDir>/src/store/$1',
+  }
+  return {
+    ...jestConfig,
+    moduleNameMapper
+  }
 }

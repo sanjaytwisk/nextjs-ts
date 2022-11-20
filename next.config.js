@@ -1,6 +1,7 @@
 const {
   PHASE_DEVELOPMENT_SERVER,
   PHASE_PRODUCTION_BUILD,
+  PHASE_TEST
 } = require('next/constants')
 
 const getBuildConfig = () => {
@@ -41,6 +42,6 @@ const getBuildConfig = () => {
 
 module.exports = (phase) => {
   const shouldAddBuildConfig =
-    phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD
+    phase === PHASE_DEVELOPMENT_SERVER || phase === PHASE_PRODUCTION_BUILD || phase === PHASE_TEST
   return shouldAddBuildConfig ? getBuildConfig() : {}
 }
