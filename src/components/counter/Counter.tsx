@@ -7,7 +7,7 @@ interface CounterProps {
   remove: () => void
 }
 
-export const Counter: React.SFC<CounterProps> = ({ count, add, remove }) => {
+export const Counter: React.FC<CounterProps> = ({ count, add, remove }) => {
   const onAdd = () => add()
   const onRemove = () => remove()
   return (

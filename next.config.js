@@ -5,18 +5,8 @@ const {
 
 const getBuildConfig = () => {
   const path = require('path')
-  const postcssPresetEnv = require('postcss-preset-env')
-  const postcssPresetEnvOptions = {
-    features: {
-      'custom-media-queries': true,
-      'custom-selectors': true,
-    },
-  }
 
   const cssOptions = {
-    postcssLoaderOptions: {
-      plugins: [postcssPresetEnv(postcssPresetEnvOptions)],
-    },
     sassOptions: {
       includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
     },

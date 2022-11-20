@@ -8,9 +8,7 @@ const HomePage: React.FC = () => {
   return (
     <main>
       <h1>Hello, world!</h1>
-      <Link href={'/reset'}>
-        <a>reset page</a>
-      </Link>
+      <Link href={'/reset'}>reset page</Link>
       <HomepageCounter />
     </main>
   )

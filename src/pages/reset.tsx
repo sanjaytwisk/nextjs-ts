@@ -9,9 +9,7 @@ import { reset } from '@store/counter/counterActions'
 const ResetPage: React.FC = () => {
   return (
     <main>
-      <Link href={'/'}>
-        <a>back</a>
-      </Link>
+      <Link href={'/'}>back</Link>
       <HomepageCounter />
     </main>
   )
