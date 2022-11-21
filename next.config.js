@@ -25,10 +25,10 @@ const getBuildConfig = () => {
             loader: 'svgo-loader',
             options: {
               plugins: [
-                { removeAttrs: { attrs: '(fill)' } },
-                { removeTitle: true },
-                { cleanupIDs: true },
-                { removeStyleElement: true },
+                { name: 'removeAttrs', params: { attrs: '(fill)' } },
+                { name: 'removeTitle', params: true },
+                { name: 'cleanupIDs', params: true },
+                { name: 'removeStyleElement', params: true },
               ],
             },
           },
